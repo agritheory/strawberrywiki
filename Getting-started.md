@@ -47,3 +47,47 @@ pip install strawberry-graphql
 ```sh
 strawberry server app
 ```
+
+## Basic usage of the graphql interface with this example
+
+You should be able to see the server running and interface that looks this:
+
+![](strawberrygraphqlgui.png)
+
+
+Once the server is running, you try out the GraphQL endpoint with the following queries:
+
+`hello`, where you can provide an integer argument, like `5`.
+```graphql
+# Write your query or mutation here
+{
+  hello(times: 5)
+}
+```
+Which should return output that looks like:
+```json
+{
+  "data": {
+    "hello": "Hello times: 5"
+  }
+}
+```
+
+`image`, which takes two integer arguments:
+```graphql
+{
+  image(height:100, width: 100)
+}
+```
+
+`user`, which returns an object with two fields, `age` and `name`.
+```graphql
+# Write your query or mutation here
+{
+  user {
+    name
+    age
+  }
+}
+```
+The values you specify in the query are the ones that will be returned, but to return "all" of the user fields you would have to write a [fragment](https://graphql.org/learn/queries/#fragments).
