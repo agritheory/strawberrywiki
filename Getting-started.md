@@ -50,12 +50,12 @@ strawberry server app
 
 ## Basic usage of the graphql interface with this example
 
-You should be able to see the server running and interface that looks this:
+You should be able to see the server running and an interface that looks this:
 
 ![](strawberrygraphqlgui.png)
 
 
-Once the server is running, you try out the GraphQL endpoint with the following queries:
+Once the server is running, try out the GraphQL endpoint with the following queries:
 
 `hello`, where you can provide an integer argument, like `5`.
 ```graphql
